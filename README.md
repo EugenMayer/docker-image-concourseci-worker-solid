@@ -18,10 +18,16 @@ This image always is based on the latest concourse/concourse base image release 
 
 The docker-image can be found under [eugenmayer/concourse-worker-solid](https://hub.docker.com/r/eugenmayer/concourse-worker-solid/)
 
-instead of using `concourse/concourse` as your worker image, use `eugenmayer/concourse-worker-solid` and either ommit the `command` keyworkd
-in docker-compose or use `worker_handler` (but thats the default, so not defining anything will just work)
+instead of using `concourse/concourse` as your worker image, use `eugenmayer/concourse-worker-solid` and either ommit the `command` keyword
+in docker-compose or use `worker_handler` (but thats the default, so not defining anything will just work).
 
-All parameters you pass to `worker_handler` will be passed to `worker`, so use whatever you like
+You can change the default strategy to unregister workers from `land-worker` to `retire-worker` by simply
+
+    command: worker_handler retire-worker
+
+All parameters you pass to `worker_handler` will be passed to `worker` except the first one ( strategy ), so use whatever you like
+
+    command: worker_handler land-worker --special-worker-param1=1 --special-worker-param1=
 
 # build it yourself
 
