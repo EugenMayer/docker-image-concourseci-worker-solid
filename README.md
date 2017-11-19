@@ -20,13 +20,13 @@ The docker-image can be found under [eugenmayer/concourse-worker-solid](https://
 
 instead of using `concourse/concourse` as your worker image, use `eugenmayer/concourse-worker-solid` and either ommit the `command` keyword
 in docker-compose or use `land-worker` (but thats the default, so not defining anything will just work). The entrypoint is now change to
-`worker_handler`
+`worker_wrapper`
 
 You can change the default strategy to unregister workers from `land-worker` to `retire-worker` by simply
 
     command: retire-worker
 
-All parameters you pass to `worker_handler` will be passed to `worker` except the first one ( strategy ), so use whatever you like
+All parameters you pass to `worker_wrapper` will be passed to `worker` except the first one ( strategy ), so use whatever you like
 
     command: land-worker --special-worker-param1=1 --special-worker-param1=
 

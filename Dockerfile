@@ -1,5 +1,5 @@
 FROM concourse/concourse
-ADD worker_handler.sh /usr/local/bin/worker_handler
-RUN chmod +x /usr/local/bin/worker_handler
-ENTRYPOINT ['worker_handler']
-CMD ['land-worker']
+ADD worker_wrapper.sh /usr/local/bin/worker_wrapper
+RUN chmod +x /usr/local/bin/worker_wrapper
+ENTRYPOINT ["/usr/local/bin/worker_wrapper"]
+CMD ["land-worker"]
