@@ -2,7 +2,7 @@
 
 set -e
 # could be land-worker or retire worker
-strategy=${1:-land-worker}
+strategy=${1:-retire-worker}
 shift 1
 
 function land_worker()
