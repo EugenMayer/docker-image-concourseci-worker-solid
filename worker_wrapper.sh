@@ -7,8 +7,8 @@ shift 1
 
 function land_worker()
 {
-    echo "Landing worker"
-    concourse land-worker --name `hostname`
+    echo "running $strategy to unregister worker"
+    concourse ${strategy} --name `hostname`
 }
 
 # Allow any signal which would kill the worker
