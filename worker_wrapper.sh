@@ -12,7 +12,7 @@ function land_worker()
 }
 
 # Allow any signal which would kill the worker
-trap land_worker  KILL TERM
+trap land_worker KILL TERM
 
 concourse worker $@ &
 
