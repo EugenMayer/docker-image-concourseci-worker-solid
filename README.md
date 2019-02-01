@@ -18,7 +18,7 @@ This image always is based on the latest concourse/concourse base image release 
 
 The docker-image can be found under [eugenmayer/concourse-worker-solid](https://hub.docker.com/r/eugenmayer/concourse-worker-solid/)
 
-instead of using `concourse/concourse` as your worker image, use `eugenmayer/concourse-worker-solid` and either ommit the `command` keyword
+instead of using `concourse/concourse` as your worker image, use `eugenmayer/concourse-worker-solid` and either omit the `command` keyword
 in docker-compose or use (default) `retire-worker`or `land-worker`. The entrypoint is now change to
 `worker_wrapper`
 
