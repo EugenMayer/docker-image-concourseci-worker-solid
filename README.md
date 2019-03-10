@@ -1,3 +1,5 @@
+**deprecated**: with Concourse 5.x the concept changed drastically and there should be no need for this implementation any longer.
+
 # WAT
 
 Currently when running concourse-workers in non BOSH environments, like we do with `docker-compose`, see https://github.com/EugenMayer/concourseci-server-boilerplate
